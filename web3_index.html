@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Token DApp</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+	<link rel="stylesheet" href="mystyle.css">
+    <script src='node_modules/web3/dist/web3.min.js'></script>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+</head>
+
+<body>
+	<div id="instalation" style="display:none">
+		<p>Binance Chain Wallet extension or Metamask Wallet extension is needed for Blockchain connection!</p>
+		<img src="bcw.png" alt="Binance Chain Wallet" title="Binance Chain Wallet">
+		<img src="metamask.png" alt="Metamask Wallet" title="Metamask Wallet">
+		<p>Click <b>
+		<a href="https://chrome.google.com/webstore/detail/binance-chain-wallet/fhbohimaelbohpjbbldcngcnapndodjp">here</a>
+		</b> to install Binance Chain Wallet extension and <b>
+		<a href="https://www.youtube.com/watch?v=skjyudsjSHY">here</a>
+		</b> want to watch an installation video tutorial.
+		
+		</p>
+		<p>
+		If you prefer to install Metamask Wallet extension click <b>
+		<a href="https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn?hl=es">here</a>
+		</b> but You have to set the Binance Smart Chain Network to Metamask after instalation.
+		</p>
+		<p>
+		Click <b>
+		<a href="https://www.youtube.com/watch?v=z9QB1lADbOs">here</a>
+		</b> to see a Metamask install video tutorial and <b>
+		<a href="https://www.youtube.com/watch?v=gk_wiXrc5r4">here</a>
+		</b> to see how connect Binance Smart Chain to Metamask.
+		</p>
+    </div>
+	
+	<div id="go_vote">
+		<button id="show_vote" onclick="show_votation_page()" style="background-color:#3e3e40" >Votations Page</button>
+    </div>
+	<div id="go_home" style="display:none">
+		<button id="show_home" onclick="show_home_page()" style="background-color:#3e3e40" >Home Page</button>
+		<br>
+		<h4>Vote Options.</h4>
+		<button id="option1" value=1 onclick="vote(this.value)" style="background-color:#3e3e40" >Option A</button>
+		<button id="option2" value=2 onclick="vote(this.value)"  style="background-color:#3e3e40" >Option B</button>
+		<button id="option3" value=3 onclick="vote(this.value)"  style="background-color:#3e3e40" >Option C</button>
+		<br>
+		<div id="piechart"></div>
+	</div>
+	<div id="connect" style="display:none">
+		<button id="enable" onclick="enable()" style="background-color:#3e3e40">Connect Wallet</button>
+    </div>
+	<div id="active_account_info" style="display:none">
+		<span id="active_account"></span>
+		<br>
+		<span id="eth_balance"></span>
+		<br>
+		<span id="token2_balance"></span>
+		<br>
+		<span id="token1_balance"></span>
+	</div>
+
+	<br >
+	
+	<div id="methods" style="display:none">
+		<div class='container2'>
+			<div id="first">
+				<p>Enter the amount in USDT you want to buy:</p>
+				<input type="number" size="10" id="buy_amount" step="0.01" style="background-color:#3e3e40"/>
+				<button onclick="buyTokens();" style="background-color:#3e3e40">Buy Tokens</button>
+			</div>
+			<div id="second">
+				<p>Enter the amount in USDT you want to sell:</p>
+				<input type="number" size="10" id="sell_amount" step="0.01" style="background-color:#3e3e40"/>
+				<button onclick="sellTokens();" style="background-color:#3e3e40">Sell Tokens</button>
+			</div>
+		</div>
+		<div id="clear"></div>
+		<br >
+
+		<div>
+			<div id="container" style="height: 400px; min-width: 310px"></div>
+		</div>
+	</div>
+	<div>
+		<script type="text/javascript" src="./web3_index.js"></script>
+		<script src="Highstock/code/highstock.js"></script>
+		<script src="Highstock/code/modules/data.js"></script>
+		<script src="Highstock/code/modules/exporting.js"></script>
+		<script src="Highstock/code/modules/export-data.js"></script>
+
+	</div>
+
+</body>
+
+</html>

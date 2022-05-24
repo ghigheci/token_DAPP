@@ -1,0 +1,54 @@
+#header {
+    width: 100%;
+    background-color: red;
+}
+.container2 {
+    width: 100%;
+    margin: auto;
+	float: center;
+	overflow: auto;
+}
+#first {
+    width: 50%;
+    float: left;
+    height: 150px;
+
+}
+#second {
+    width: 50%;
+    float: left;
+    height: 150px;
+}
+
+#clear {
+    clear: both;
+}
+a {
+    color: white;
+}
+* {
+	font-family:sans-serif;
+    color: #E0E0E3;
+}
+body {
+	background-color: #3e3e40;
+}
+#btn_input {
+	color: black;
+}
+
+#show_vote {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+}
+
+#show_home {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+}
+
+#vote_div {
+    position: relative;
+}
